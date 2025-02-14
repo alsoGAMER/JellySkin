@@ -74,47 +74,49 @@
 		&:focus-visible .cardImageContainer::after {
 			transform: scale(1.1);
 		}
-		&.personCard {
-			height: auto;
-			.card {
-				&Padder-overflowPortrait {
-					// padding-bottom: 100% !important;
-					.cardImageIcon {
-						color: transparent !important;
+		@if config.$component-cards-portraits {
+			&.personCard {
+				height: auto;
+				.card {
+					&Padder-overflowPortrait {
+						// padding-bottom: 100% !important;
+						.cardImageIcon {
+							color: transparent !important;
+						}
 					}
-				}
-				&Box {
-					position: relative;
-				}
-				&Overlay {
-					&Container {
-						background: transparent !important;
-						// height: calc(100% - 2.825em);
-						z-index: 3;
+					&Box {
+						position: relative;
 					}
+					&Overlay {
+						&Container {
+							background: transparent !important;
+							// height: calc(100% - 2.825em);
+							z-index: 3;
+						}
 
-					&Button-br {
-						right: 0.5em;
-						bottom: 0.5em;
+						&Button-br {
+							right: 0.5em;
+							bottom: 0.5em;
+						}
 					}
-				}
-				&Content {
-					filter: brightness(1);
-					transition: filter $transition-time-default ease-in-out;
-					$image-margin: 1em;
-					margin: $image-margin !important;
-					width: calc(100% - 2*$image-margin);
-					height: calc(100% - 2*$image-margin);
-					border-radius: 100% !important;
-				}
-				&Scalable {
-					height: auto;
-					aspect-ratio: 1;
-					.cardImageContainer::after {
-						background-size: cover;
+					&Content {
+						filter: brightness(1);
+						transition: filter $transition-time-default ease-in-out;
+						$image-margin: 1em;
+						margin: $image-margin !important;
+						width: calc(100% - 2*$image-margin);
+						height: calc(100% - 2*$image-margin);
+						border-radius: 100% !important;
 					}
-				}
-				&Text {
+					&Scalable {
+						height: auto;
+						aspect-ratio: 1;
+						.cardImageContainer::after {
+							background-size: cover;
+						}
+					}
+					&Text {
+					}
 				}
 			}
 		}
