@@ -5,7 +5,6 @@
 
 @if config.$component-button {
 	.emby-button {
-		position: relative;
 		&[is="emby-button"]:not(%emby-button-exceptions),
 		&.raised[is="emby-linkbutton"]:not(.emby-tab-button) {
 			background: ab.$background-dark;
